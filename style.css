@@ -1,0 +1,200 @@
+/* Fondo nocturno */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0d1b2a, #000814);
+  font-family: "Georgia", serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Luna */
+.luna {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+  animation: brillar 3s ease-in-out infinite alternate;
+}
+
+@keyframes brillar {
+  from { box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); }
+  to   { box-shadow: 0 0 60px rgba(255, 255, 255, 0.8); }
+}
+
+/* Estrellas */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 10% 20%, white, transparent),
+    radial-gradient(1.5px 1.5px at 25% 70%, white, transparent),
+    radial-gradient(1.8px 1.8px at 50% 30%, white, transparent),
+    radial-gradient(1px 1px at 70% 80%, white, transparent),
+    radial-gradient(1.2px 1.2px at 85% 50%, white, transparent),
+    radial-gradient(1.4px 1.4px at 95% 10%, white, transparent),
+    radial-gradient(1.6px 1.6px at 15% 85%, white, transparent),
+    radial-gradient(2px 2px at 40% 10%, white, transparent),
+    radial-gradient(1.3px 1.3px at 65% 60%, white, transparent),
+    radial-gradient(1px 1px at 80% 40%, white, transparent),
+    radial-gradient(1.5px 1.5px at 55% 85%, white, transparent),
+    radial-gradient(1.2px 1.2px at 30% 50%, white, transparent),
+    radial-gradient(1px 1px at 5% 40%, white, transparent),
+    radial-gradient(2px 2px at 45% 90%, white, transparent),
+    radial-gradient(1.4px 1.4px at 75% 15%, white, transparent),
+    radial-gradient(1.6px 1.6px at 90% 75%, white, transparent),
+    radial-gradient(1.2px 1.2px at 35% 25%, white, transparent),
+    radial-gradient(1.8px 1.8px at 60% 10%, white, transparent);
+  background-repeat: no-repeat;
+  animation: estrellas 5s infinite alternate;
+}
+
+@keyframes estrellas {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Carta */
+.carta {
+  background: #fffdf9;
+  width: 600px;
+  max-width: 90%;
+  padding: 40px;
+  border: 2px solid #d4c4b0;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  line-height: 1.8;
+  z-index: 1;
+  text-align: left;
+}
+
+.carta h1 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #5a4632;
+}
+
+.carta p {
+  margin: 12px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.firma {
+  margin-top: 30px;
+  text-align: right;
+  font-style: italic;
+}
+
+/* Reloj estilo digital */
+.reloj {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 2em;
+  color: #2d1b0f;
+}
+
+.reloj div {
+  background: #fdf6e3;
+  border: 2px solid #d4c4b0;
+  border-radius: 8px;
+  padding: 15px 20px;
+  min-width: 60px;
+  text-align: center;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.2);
+}
+
+.reloj span {
+  font-size: 0.7em;
+  color: #5a4632;
+}
+
+.lista-cartas {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.lista-cartas li {
+  margin: 10px 0;
+}
+
+.lista-cartas a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #3b2e1e;
+  background: #d4c4b0;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+.lista-cartas a:hover {
+  background: #c2b19a;
+}
+#abrirCofre {
+  background: #d4c4b0;
+  color: #3b2e1e;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+
+#abrirCofre:hover {
+  background: #c2b19a;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    flex-direction: column; /* permite que los elementos se apilen */
+    justify-content: flex-start; /* sube la carta y deja ver el cielo */
+  }
+
+  .carta {
+    max-width: 85%;  
+    padding: 15px;
+    font-size: 0.9rem;
+    background: rgba(255, 253, 249, 0.9); /* un poquito transparente */
+  }
+
+  .luna {
+    top: 20px;   /* baja la luna en móvil */
+    left: 50%;   /* céntrala */
+    transform: translateX(-50%); /* la ajusta al centro */
+    width: 90px;
+    height: 90px;
+  }
+
+  .reloj {
+    flex-direction: column;
+    font-size: 1.4rem;
+  }
+
+  .reloj div, .reloj span {
+    display: inline-block;
+    margin: 4px 0;
+  }
+}

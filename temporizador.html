@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cofre de pandora</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <!-- Luna -->
+  <div class="luna"></div>
+  
+  <!-- Carta con temporizador tipo reloj -->
+  <div class="carta">
+  <h1>Cuenta regresiva</h1>
+  <a href="index.html">Inicio</a>
+  <p>
+    El tiempo guarda secretos...  
+    Este reloj marcará el instante en que el cofre vuelva a abrirse.
+  </p>
+
+  <div class="reloj">
+    <div id="dias">00</div><span>d</span>
+    <div id="horas">00</div><span>h</span>
+    <div id="minutos">00</div><span>m</span>
+    <div id="segundos">00</div><span>s</span>
+  </div>
+
+  <!-- Botón oculto al inicio -->
+  <button id="abrirCofre" style="display:none;">Abrir cofre</button>
+
+  <p class="firma">By,<br>Feli</p>
+</div>
+
+  <script src="temporizador.js"></script>
+</body>
+</html>
