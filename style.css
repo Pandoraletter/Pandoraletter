@@ -166,35 +166,32 @@ body::before {
 #abrirCofre:hover {
   background: #c2b19a;
 }
+
 @media (max-width: 600px) {
   body {
     padding: 10px;
-    flex-direction: column; /* permite que los elementos se apilen */
-    justify-content: flex-start; /* sube la carta y deja ver el cielo */
   }
 
   .carta {
-    max-width: 85%;  
+    max-width: 95%;
     padding: 15px;
     font-size: 0.9rem;
-    background: rgba(255, 253, 249, 0.9); /* un poquito transparente */
-  }
-
-  .luna {
-    top: 20px;   /* baja la luna en móvil */
-    left: 50%;   /* céntrala */
-    transform: translateX(-50%); /* la ajusta al centro */
-    width: 90px;
-    height: 90px;
   }
 
   .reloj {
-    flex-direction: column;
-    font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;              /* espacio proporcional al ancho de pantalla */
+  font-size: 4vw;        /* el tamaño del texto se adapta */
+  flex-wrap: wrap;       /* evita que se rompa en pantallas muy pequeñas */
   }
 
-  .reloj div, .reloj span {
-    display: inline-block;
-    margin: 4px 0;
+  .reloj div {
+  font-size: 4vw;        /* números se adaptan también */
+  }
+
+  .reloj span {
+  font-size: 3vw;        /* las letras d h m s un poco más pequeñas */
   }
 }
