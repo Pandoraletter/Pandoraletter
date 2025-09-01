@@ -65,6 +65,31 @@
   color: #ddd;
   margin: 0 4px;
 }
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
 
-/* --- Botón Pandora --- */
+  .cofre {
+    max-width: 95%;
+    padding: 15px;
+    font-size: 0.9rem;
+  }
 
+  .reloj {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;              /* espacio proporcional al ancho de pantalla */
+  font-size: 4vw;        /* el tamaño del texto se adapta */
+  flex-wrap: wrap;       /* evita que se rompa en pantallas muy pequeñas */
+  }
+
+  .reloj div {
+  font-size: 4vw;        /* números se adaptan también */
+  }
+
+  .reloj span {
+  font-size: 3vw;        /* las letras d h m s un poco más pequeñas */
+  }
+}
