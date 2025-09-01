@@ -1,5 +1,5 @@
 // Fecha final fija (ejemplo: 31 de agosto de 2025 a las 18:00)
-const endDate = new Date("2025-09-30T10:00:00").getTime();
+const endDate = new Date("2025-09-31T10:12:00").getTime();
 
 // Seleccionamos elementos
 const reloj = document.querySelector(".reloj");
