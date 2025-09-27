@@ -1,6 +1,6 @@
 /* Carta */
 .cofre {
-  background: #1c1c1c;
+  background: rgb(28, 28, 28, 0.05);
   padding: 40px;
   border-radius: 15px;
   max-width: 800px;
