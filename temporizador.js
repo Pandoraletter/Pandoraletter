@@ -1,5 +1,5 @@
 // Fecha final fija (ejemplo: 31 de agosto de 2025 a las 18:00)
-const endDate = new Date("2025-11-01T10:00:00").getTime();
+const endDate = new Date("2025-12-01T10:00:00").getTime();
 
 const reloj = document.querySelector(".reloj");
 const botonCofre = document.getElementById("abrirCofre");
